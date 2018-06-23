@@ -1,4 +1,6 @@
 .page-header {
+    display: flex;
+    flex-direction: row;
     background-color: #ff9400;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
