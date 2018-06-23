@@ -15,7 +15,13 @@
             <p>Hello eweryone!</p>
         </article>
         <article>
-            <p>I'm here</p>
+            <p>
+                {% for post in posts %}
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+                {% endfor %}
+            </p>
         </article>
     </section>
 </body>
