@@ -60,6 +60,12 @@ h4 {
     box-shadow: 5px 10px #ff9400;
 }
 
+.post__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .post h1 a,
 .post h1 a:visited {
     color: #000000;
