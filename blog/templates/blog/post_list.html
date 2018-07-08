@@ -1,4 +1,7 @@
-{% extends 'blog/base.html' %} {% block content %} {% for post in posts %}
+{% extends 'blog/base.html' %} {% block content %}
+<h1>Count of posts: {{posts.count}}</h1>
+<hr>
+{% for post in posts %}
 <div class="post">
     <div class="post__header">
         <div class="date">
@@ -8,5 +11,6 @@
     </div>
     <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
     <p>{{ post.text|linebreaksbr }}</p>
+    <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
 </div>
 {% endfor %} {% endblock %}
